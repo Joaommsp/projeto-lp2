@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@700&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -67,6 +69,9 @@ body {
 .underlineLink:hover {
   border-bottom: 2px solid #ffffff
 }
+#navBar {
+  transition: 1s;
+}
 #navbarNav {
   transition: 1s;
 }
@@ -90,14 +95,29 @@ body {
 /*===================BANNER================*/
 #banner {
   display: flex;
-  margin-top: 20px;
+  margin-top: 36px;
+  margin-bottom: 56px;
+  padding-bottom: 56px;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   border-bottom: 5px solid var(--cor-primaria);
 }
 #bannerPrimary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 40%;
+}
+#bannerPrimaryImages div {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  height: 100px;
+}
+#bannerImg2 {
+  max-width: 200px;
 }
 .text-red {
   color: var(--cor-primaria);
@@ -132,14 +152,149 @@ h1 {
   width: 100%;
 }
 
+/* =========== SHOWROOM ========*/
+
+#showroom {
+  padding-top: 56px;
+  background-color: #F5F7F8;
+  width: 100%;
+}
+.minwidth {
+  min-width: 200px;
+}
+#showroom h3 {
+  font-size: 3em;
+  text-align: center;
+  font-family: 'Exo 2', sans-serif;
+}
+#showroom h3 span {
+  border-bottom: 8px solid var(--cor-primaria);
+}
+#cards {
+  margin-top: 48px;
+}
+.local {
+  font-size: .8em;
+  font-weight: bold;
+}
+.time{
+  color:var(--cor-primaria);
+  font-size: .8em;
+  font-weight: bold;
+}
+.category {
+  font-size: 1.8em;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+.priceDiv {
+  display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.priceDiv p{
+  margin-bottom: 0;
+}
+.price {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+.price span {
+  font-size: 1rem;
+}
+.cardSpace {
+  margin-bottom: 1rem;
+}
+.seeMoreBtn {
+  margin-bottom: 1rem;
+  transition: .5s;
+}
+.seeMoreBtn a {
+  font-size: 1em;
+  text-decoration: none;
+  color: var(--ultra-white);
+}
+.seeMoreBtn a:hover {
+  color: var(--cor-primaria);
+}
+
+/*=================LOGIN POPUP ================*/
+
+#loginBntContainer {
+  padding-left: 0;
+  padding-right: 0;
+}
+#loginPopup {
+  width: 48rem;
+  background-color: var(--cor--white);
+  position: absolute;
+  border-radius: 25px;
+  left: 50%;
+  top: 350px;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  padding-right: 0;
+  padding-left: 0;
+}
+.displayNone {
+  display: none;
+}
+.blur {
+  filter: blur(5px);
+}
+.transitios1s {
+  transition: 1s;
+}
+.noPointerEvents {
+  pointer-events: none;
+}
+#loginPopupContainer {
+  width: 50%;
+  padding-left: 0;
+  padding-right: 0;
+}
+#formContainer {
+  width: 50%;
+}
+#loginBntContainer {
+  display: flex;
+  justify-content: space-between;
+}
+#loginPopupImg {
+  height: 100%;
+  max-width: 100%;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+}
+#formContainer {
+  padding-top: 5rem;
+  position: relative;
+}
+#closeLogin {
+  position: absolute;
+  border: 0;
+  background-color: transparent;
+  top: .5rem;
+  right: 1rem;
+}
+#closeLogin img {
+  width: 28px;
+}
+
 /*========= MOBILE ============*/
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   #banner {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 36px;
+    padding-bottom: 0px;
+    border-bottom: 5px solid transparent;
   }
   #bannerPrimary {
     width: 100%;
@@ -173,6 +328,96 @@ h1 {
     color: var(--ultra-white);
     border: 2px solid transparent;
   }
+  #showroom h3 {
+    font-size: 1.2em;
+    text-align: center;
+    padding: 0 24px 0 24px;
+    font-family: 'Exo 2', sans-serif;
+  }
+  #showroom h3 span {
+    border-bottom: 4px solid var(--cor-primaria);
+  }
+  #bannerPrimaryImages div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 100px;
+  }
+  #bannerImg2 {
+    max-width: 200px;
+  }
+  .category {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  .seeMoreBtn a {
+    font-size: .8em;
+  }
+  
+#loginBntContainer {
+  padding-left: 0;
+  padding-right: 0;
+  padding: 20px;
+}
+#loginPopup {
+  width:  20rem;
+  background-color: var(--cor--white);
+  position: absolute;
+  border-radius: 15px;
+  left: 50%;
+  top: 350px;
+  transform: translate(-50%, -50%);
+  z-index: 11;
+  padding-right: 0;
+  padding-left: 0;
+}
+.displayNone {
+  display: none;
+}
+.blur {
+  filter: blur(5px);
+}
+.transitios1s {
+  transition: 1s;
+}
+.noPointerEvents {
+  pointer-events: none;
+}
+#loginPopupContainer {
+  width: 0%;
+  padding-left: 0;
+  padding-right: 0;
+  display: none;
+}
+#formContainer {
+  width: 100%;
+}
+#loginBntContainer {
+  display: flex;
+  justify-content: space-between;
+}
+#loginPopupImg {
+  height: 100%;
+  max-width: 100%;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+  display: none;
+}
+#formContainer {
+  padding-top: 0rem;
+  position: relative;
+}
+#closeLogin {
+  position: absolute;
+  border: 0;
+  background-color: transparent;
+  top: 0;
+  right: 0;
+}
+#closeLogin img {
+  width: 28px;
+}
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   #banner {
@@ -180,6 +425,7 @@ h1 {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    border-bottom: 5px solid var(--cor-primaria);
   }
   #bannerPrimary {
     width: 100%;
@@ -217,35 +463,48 @@ h1 {
     color: var(--ultra-white);
     border: 2px solid transparent;
   }
-
-  @media screen and (max-width: 990px) {
-    #loginBnt {
-      text-decoration: none;
-      border-radius: 10px;
-      width: 100px;
-      text-align: start;
-      background-color: transparent;
-      color: var(--ultra-white);
-      font-weight: bold;
-      margin-right: 20px;
-      transition: background-color 0.3s, color 0.3s, border .5s;
-      border: 2px solid transparent;
-    }
-    #loginBnt:hover {
-      background-color: transparent;
-      color: var(--ultra-white);
-      border: 2px solid transparent;
-    }
-    
+  #showroom h3 {
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Exo 2', sans-serif;
+  }
+  #showroom h3 span {
+    border-bottom: 4px solid var(--cor-primaria);
+  }
+  .category {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+  .price {
+    font-size: 1em;
+    font-weight: bold;
+  }
+  .price span {
+    font-size: .8rem;
+  }
+  .seeMoreBtn a {
+    font-size: .8em;
   }
 }
 
-/* =========== SHOWROOM ========*/
+@media screen and (max-width: 990px) {
+  #loginBnt {
+    text-decoration: none;
+    border-radius: 10px;
+    width: 100px;
+    text-align: start;
+    background-color: transparent;
+    color: var(--ultra-white);
+    font-weight: bold;
+    margin-right: 20px;
+    transition: background-color 0.3s, color 0.3s, border .5s;
+    border: 2px solid transparent;
+  }
+  #loginBnt:hover {
+    background-color: transparent;
+    color: var(--ultra-white);
+    border: 2px solid transparent;
+  }
+}
 
-#showroom {
-  background-color: #F5F7F8;
-  width: 100%;
-}
-.minwidth {
-  min-width: 200px;
-}

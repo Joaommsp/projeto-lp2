@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br" notranslate>
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,30 +11,10 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-
-  <script>
-    $(document).ready(function(){
-      $(".slider").bxSlider({
-        auto: true,
-        mode: "horizontal",
-        touchEnabled: false,
-        controls: false
-      });
-    });
-    $(document).ready(function(){
-      $(".showroom").bxSlider({
-        auto: true,
-        mode: "horizontal",
-        touchEnabled: false,
-        controls: false,
-      });
-    });
-  </script>
-
   <title>Document</title>
 </head>
 <body>
-  <nav class="navbar navbar-expand-lg bg-red boxShadow fixed">
+  <nav class="navbar navbar-expand-lg bg-red boxShadow fixed" id="navBar">
     <div class="container-fluid navBarMgLeft5 ">
       <a class="navbar-brand" href="#">Navbar</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -71,7 +51,7 @@
     </div>
   </nav>
   <div class="container-fluid">
-  <main>
+  <main class="transitios1s">
     <div class="container" id="banner" >
       <div class="container" id="bannerPrimary" >
         <h1 class="text-light mt-5">Seminovos pelo melhor preço do mercado</h1>
@@ -82,8 +62,11 @@
           <li>✔ Escolha como quer pagar</li>
         </ul>
       </div>
-      <div class="container" >
+      <div class="container" id="bannerPrimaryImages" >
         <img src="img/banner-sw4-img.png" alt="Banner SW4 Image"  id="bannerImg"  class="img-fluid bannerImgAnimation">
+        <div class="container" >
+          <img src="img/EveryOneCanDrive-img.png" alt="Every One Can Drive Image"  id="bannerImg2"  class="img-fluid bannerImgAnimation">
+        </div>
       </div>
     </div>
     <div class="container" id="secundaryBanner" >
@@ -94,49 +77,129 @@
     </div>
     <div class="container-fluid" id="showroom">
       <h3><span>Compra e locação</span> de carros seminovos</h3>
-      <div class="container text-center">
+      <div class="container text-center" id="cards">
         <div class="row">
-          <div class="col">
+          <div class="col cardSpace" id="sedans">
             <div class="showroom">
               <div><img src="img/1.png" alt="Showroom Image"  class="img-fluid minwidth"></div>
               <div>Outra imagem</div>
             </div>
+            <p class="local"> <img src="public/local-icon.svg" alt="local Map Icon"> Paulo Afonso: Entrega: <span class="time">1 a 5 dias Úteis</span></p>
+            <p class="category">Sedan</p>
+            <div class="priceDiv">
+              <p>A partir de:</p>
+              <p class="price">
+                R$ 250,00/<span class="priceWeek">semana</span>
+              </p>
+            </div>
+            <button type="button" class="btn bg-red btn-lg seeMoreBtn" id="sedanBtn"><a href="">Ver mais</a></button>
           </div>
-          <div class="col">
+          <div class="col cardSpace" id="mediumSedans">
             <div class="showroom">
               <div><img src="img/2.png" alt="Showroom Image"  class="img-fluid minwidth showroomImg"></div>
               <div>I am another slide.</div>
             </div>
+            <p class="local"> <img src="public/local-icon.svg" alt="local Map Icon"> Paulo Afonso: Entrega: <span class="time">1 a 5 dias Úteis</span></p>
+            <p class="category">Sedan Médio</p>
+            <div class="priceDiv">
+              <p>A partir de:</p>
+              <p class="price">
+                R$ 300,00/<span class="priceWeek">semana</span>
+              </p>
+            </div>
+            <button type="button" class="btn bg-red btn-lg seeMoreBtn" id="mediumSedanBtn"><a href="">Ver mais</a></button>
           </div>
-          <div class="col">
+          <div class="col cardSpace" id="hatchs">
             <div class="showroom">
               <div><img src="img/3.png" alt="Showroom Image"  class="img-fluid minwidth"></div>
               <div>I am another slide.</div>
             </div>
+            <p class="local"> <img src="public/local-icon.svg" alt="local Map Icon"> Paulo Afonso: Entrega: <span class="time">1 a 5 dias Úteis</span></p>
+            <p class="category">Compacto</p>
+            <div class="priceDiv">
+              <p>A partir de:</p>
+              <p class="price">
+                R$ 200,00/<span class="priceWeek">semana</span>
+              </p>
+            </div>
+            <button type="button" class="btn bg-red btn-lg seeMoreBtn" id="compactBtn"><a href="">Ver mais</a></button>
           </div>
         </div>
         <div class="row">
-          <div class="col">
+          <div class="col cardSpace" id="mediumHatchs">
             <div class="showroom">
               <div><img src="img/1.png" alt="Showroom Image"  class="img-fluid minwidth"></div>
               <div>Outra imagem</div>
             </div>
+            <p class="local"> <img src="public/local-icon.svg" alt="local Map Icon"> Paulo Afonso: Entrega: <span class="time">1 a 5 dias Úteis</span></p>
+            <p class="category">Hacth</p>
+            <div class="priceDiv">
+              <p>A partir de:</p>
+              <p class="price">
+                R$ 300,00/<span class="priceWeek">semana</span>
+              </p>
+            </div>
+            <button type="button" class="btn bg-red btn-lg seeMoreBtn" id="hatchBtn"><a href="">Ver mais</a></button>
           </div>
-          <div class="col">
+          <div class="col cardSpace" id="pickUps">
             <div class="showroom">
               <div><img src="img/2.png" alt="Showroom Image"  class="img-fluid minwidth showroomImg"></div>
               <div>I am another slide.</div>
             </div>
+            <p class="local"> <img src="public/local-icon.svg" alt="local Map Icon"> Paulo Afonso: Entrega: <span class="time">1 a 5 dias Úteis</span></p>
+            <p class="category">Caminhonete</p>
+            <div class="priceDiv">
+              <p>A partir de:</p>
+              <p class="price">
+                R$ 450,00/<span class="priceWeek">semana</span>
+              </p>
+            </div>
+            <button type="button" class="btn bg-red btn-lg seeMoreBtn" id="pickUpBtn"><a href="">Ver mais</a></button>
           </div>
-          <div class="col">
+          <div class="col cardSpace" id="suvs">
             <div class="showroom">
               <div><img src="img/3.png" alt="Showroom Image"  class="img-fluid minwidth"></div>
               <div>I am another slide.</div>
             </div>
+            <p class="local"> <img src="public/local-icon.svg" alt="local Map Icon"> Paulo Afonso: Entrega: <span class="time">1 a 5 dias Úteis</span></p>
+            <p class="category">SUV</p>
+            <div class="priceDiv">
+              <p>A partir de:</p>
+              <p class="price">
+                R$ 400,00/<span class="priceWeek">semana</span>
+              </p>
+            </div>
+            <button type="button" class="btn bg-red btn-lg seeMoreBtn" id="suvbtn"><a href="">Ver mais</a></button>
           </div>
         </div>
       </div>
     </div>
   </main>
+  <div class="container displayNone" id="loginPopup">
+    <div class="container" id="loginBntContainer">
+      <div class="container" id="loginPopupContainer">
+        <img src="img/loginpopup-img.jpg" alt="Red Car image" id="loginPopupImg">
+      </div>
+      <div class="container" id="formContainer">
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <div id="emailHelp" class="form-text">Seu E-mail nunca será compartilhado</div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Senha</label>
+            <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Lembrar de mim</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Entrar</button>
+        </form>
+        <button id="closeLogin"><img src="public/close-icon.svg" alt=""></button>
+    </div>
+    </div>
+  </div>
 </body>
 </html>
