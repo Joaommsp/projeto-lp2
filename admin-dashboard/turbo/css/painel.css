@@ -1,0 +1,183 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#liveToastBtn {
+  background-color: transparent;
+  border: none;
+}
+
+
+.principal {
+  display: flex;
+  min-height: calc(100% - 60px);
+}
+
+
+.barraLateral {
+  background-color: #ffffff;
+  color: #77153e;
+  width: 250px;
+  padding: 20px;
+}
+.cabecalho {
+  background: #771234;
+  height: 60px;
+}
+
+
+
+.padrao {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 97%;
+
+}
+.padrao .titulo-hamb {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+}
+
+.hamburguerTeste {
+  color: white !important;
+  font-size: 25px;
+}
+
+.cabecalho .cabecalho {
+  display: flex;
+}
+.conteudo-principal {
+  background-color: rgba(245, 245, 245, 0.767);
+  width: calc(100% - 250px);
+}
+
+.menu-lateral ul ul {
+  display: none;
+}
+
+.barraLateral .perfil{
+  width: 100%;
+}  
+.perfil .perfil-img {
+  width: 30%;
+  border-radius: 50%;
+  margin: auto;
+  display: block;
+}
+
+.perfil  {
+  font-size: 12px;
+  text-align: center;
+  color: #153d77;
+  font-weight: 500;
+}
+
+.caixa-faturamentos {
+  padding: 2rem;
+  margin-left:1rem;
+
+}
+
+.menu-lateral li:hover > ul {
+  display: block;
+}
+
+.button-container {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.card-body {
+  width: 90% !important;
+}
+
+.esconder {
+  display: none;
+}
+
+.mostrar {
+  display: block;
+}
+
+.btnTurboMotors {
+  background: none; 
+  border: none;
+  padding: 0; 
+  cursor: pointer; 
+  margin-left: 20px;
+}
+
+.btnTurboMotors i {
+  font-size: 30px;
+  color: #424242;
+}
+
+.button-save {
+  display: none;
+  margin-top: 2rem;
+}
+
+.bloqueado {
+  position: fixed;
+  width: 100%;
+  pointer-events: none;
+}
+
+.bloqueado input {
+  width: 50%;
+}
+
+.meuAlerta {
+  color: white !important;
+  font-size: 1.3rem;
+  margin-right: 20px;
+}
+
+.notification-badge {
+  position: fixed;
+  color: white;
+  top: 2%;
+  right: 2%;
+  background-color: red;
+  width: 14px;
+  height: 16px;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+
+.meuCSS {
+  border: none;
+}
+
+.meuCSS a{
+  border-bottom: 1px solid gainsboro;
+  color: #771234;
+  font-weight: 600;
+}
+
+.menuCSS i{
+  font-weight: 900 !important;
+}
+
+
+
+@media only screen and (max-device-width: 700px) {
+    .barraLateral {
+      display: none;
+    }
+
+    .me-auto {
+      display: none;
+    }
+    .hamburguerTeste {
+      margin-right: 60%;
+    }
+  }
