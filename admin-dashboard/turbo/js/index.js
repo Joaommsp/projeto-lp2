@@ -50,14 +50,17 @@ function MostrarAviso() {
   let shUser = document.getElementById('mostrarUsuarioLogado');
   let ntfEsconder = document.getElementById('notificacaoum')
   var toast = new bootstrap.Toast(document.getElementById('liveToast'));
-  
+
+  console.log(ntfEsconder.getAttribute("style"))
+
+  if(ntfEsconder.getAttribute("style") == 'display: none;') {
+      shUser.innerText = 'Ops. Sem notificação para visualizar.';
+  } else {
+    shUser.innerText = 'Seja Bem-vindo(a) ' + usrLogado;
+    ntfEsconder.style.display =  'none';
+  }
 
   toast.show();
-  shUser.innerText = 'Seja Bem-vindo(a) ' + usrLogado;
-  
-  // console.log(ntfEsconder);
-
-  ntfEsconder.style.display =  'none';
 
 
 
@@ -118,3 +121,22 @@ document.addEventListener("DOMContentLoaded", function(){
 }); 
 // DOMContentLoaded  end
 
+
+
+// Função para exibir um alert ao clicar no ícone de menu
+function menu() {
+
+  var menu = document.querySelector('.barraLateral');
+
+  var retorno =  menu.getAttribute('style'); 
+ console.log(retorno);
+  if(retorno == 'display: none;'){
+    menu.style.display = 'block'
+  } else {
+    menu.style.display = 'none'
+  }
+}
+
+// Adicione um evento de clique ao ícone de menu
+var menuIcon = document.getElementById('menuIcon');
+menuIcon.addEventListener('click', mostrarAlerta);
