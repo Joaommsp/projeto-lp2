@@ -1,3 +1,4 @@
+
 let bannerImg = document.getElementById('bannerImg')
 bannerImg.addEventListener('animationend', () => {
   bannerImg.classList.remove('bannerImgAnimation')
@@ -82,4 +83,34 @@ function blockRow() {
 
 function unBlockRow() {
   document.body.style.overflow = 'auto'
+}
+
+// LOGIN COM GOOGLE PARA USUARIO 
+
+function handleCredentialResponse(response) {
+  const data = jwt_decode(response.credential)
+  console.log(data)
+
+}
+window.onload = function () {
+  
+  google.accounts.id.initialize({
+    client_id: "119707003559-1u7c4dlec2s9f34q5dlo476vkejhmdc7.apps.googleusercontent.com",
+    callback: handleCredentialResponse
+  });
+
+  google.accounts.id.renderButton(
+    document.getElementById("buttonDiv"),
+    { theme: "filled_blue",
+     size: "large" ,
+     type:"standard",
+     shape:"rectangular",
+     text:"signin_with",
+     size:"large",
+     locale:"pt-PT",
+     logo_alignment:"left"
+    }  // customization attributes
+  );
+
+  google.accounts.id.prompt(); // also display the One Tap dialog
 }
