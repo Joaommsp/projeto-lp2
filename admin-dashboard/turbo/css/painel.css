@@ -18,12 +18,12 @@ body, html {
 
 .barraLateral {
   background-color: #ffffff;
-  color: #77153e;
+  color: #0174BE;
   width: 250px;
   padding: 20px;
 }
 .cabecalho {
-  background: #771234;
+  background: #0174BE;
   height: 60px;
 }
 
@@ -49,19 +49,44 @@ body, html {
   font-size: 25px;
 }
 
+#menu {
+  transition: .5s;
+}
+
+#menu:hover {
+  cursor: pointer;
+}
+
+/* ================ CONTROLANDO MENU HAMBURGUER ==========*/
+
+.closeMenu {
+  display: none;
+}
+
+.mobileDisplay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  height: 100vh;
+}
+.mobileMenuBtn {
+  margin-left: 8rem;
+}
+
 .cabecalho .cabecalho {
   display: flex;
 }
 .conteudo-principal {
   background-color: rgba(245, 245, 245, 0.767);
-  width: calc(100% - 250px);
+  width: 100%;
 }
 
 .menu-lateral ul ul {
   display: none;
 }
 
-.barraLateral .perfil{
+.barraLatelra .perfil{
   width: 100%;
 }  
 .perfil .perfil-img {
@@ -124,13 +149,12 @@ body, html {
 }
 
 .bloqueado {
-  position: fixed;
   width: 100%;
   pointer-events: none;
 }
 
 .bloqueado input {
-  width: 50%;
+  width: 100%;
 }
 
 .meuAlerta {
@@ -140,11 +164,11 @@ body, html {
 }
 
 .notification-badge {
-  position: fixed;
+  position: absolute;
   color: white;
   top: 2%;
   right: 2%;
-  background-color: red;
+  background-color: #D80032;
   width: 14px;
   height: 16px;
   text-align: center;
@@ -170,9 +194,6 @@ body, html {
 
 
 @media only screen and (max-device-width: 700px) {
-    .barraLateral {
-      display: none;
-    }
 
     .me-auto {
       display: none;

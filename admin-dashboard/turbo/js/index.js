@@ -138,5 +138,24 @@ function menu() {
 }
 
 // Adicione um evento de clique ao ícone de menu
-var menuIcon = document.getElementById('menuIcon');
-menuIcon.addEventListener('click', mostrarAlerta);
+// var menuIcon = document.getElementById('menuIcon');
+// menuIcon.addEventListener('click', mostrarAlerta);
+
+// Ação do meunu hamburger ( fechar e abrir e mobile fechado como padrão)
+
+let hamburgerBtn = document.getElementById('menu')
+let sideBar = document.getElementById('sideBar')
+
+if (window.matchMedia("(max-width: 767px)").matches) {
+  sideBar.classList.add('closeMenu')
+  sideBar.classList.add('mobileDisplay')
+
+  hamburgerBtn.addEventListener('click', () => {
+    hamburgerBtn.classList.contains('mobileMenuBtn') ? hamburgerBtn.classList.remove('mobileMenuBtn') : hamburgerBtn.classList.add('mobileMenuBtn')
+  })
+}
+
+
+hamburgerBtn.addEventListener('click', () => {
+  sideBar.classList.contains('closeMenu') ? sideBar.classList.remove('closeMenu') : sideBar.classList.add('closeMenu')
+})
