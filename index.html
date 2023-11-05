@@ -18,9 +18,9 @@
 </head>
 <body>
   <nav class="navbar navbar-expand-lg bg-red boxShadow fixed" id="navBar">
-    <div class="container-fluid navBarMgLeft5 ">
-      <a class="navbar-brand" href="#">Navbar</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <div class="container-fluid navBarMgLeft5 " id="navBarContent">
+      <a class="navbar-brand" href="#"><img src="img/Logo.png" alt="Turbo Motors Logo" id="logo"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" onclick="closeDropDow()">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse h" id="navbarNav">
@@ -43,7 +43,7 @@
             </li>
           </ul>
         </div>
-        <div class="collapse navbar-collapse h navBarMgLeft30" id="navbarNav">
+        <div class="collapse navbar-collapse h navBarMgLeft30 loginDiv" id="navbarNav">
           <ul class="navbar-nav">
               <li class="nav-item">
                 <a class="nav-link" href="#" id="loginBnt">Login</a>
@@ -74,8 +74,8 @@
     </div>
     <div class="container" id="secundaryBanner" >
       <div class="slider">
-        <div><img src="img/banner2.png" alt="Banner Image"  class="img-fluid"></div>
-        <div>I am another slide.</div>
+        <div><img src="img/banner2.png" alt="Banner Image" class="img-fluid"></div>
+        <div><img src="img/banner2.2.png" alt="Banner Image" class="img-fluid"></div>
       </div>
     </div>
     <div class="container-fluid" id="showroom">
@@ -84,8 +84,9 @@
         <div class="row">
           <div class="col cardSpace" id="sedans">
             <div class="showroom">
-              <div><img src="img/1.png" alt="Showroom Image"  class="img-fluid minwidth"></div>
-              <div>Outra imagem</div>
+              <div><img src="img/sedan/1.png" alt="Showroom Image"  class="img-fluid minwidth"></div>
+              <div><img src="img/sedan/2.png" alt="Showroom Image"  class="img-fluid minwidth"></div>
+              <div><img src="img/sedan/3.png" alt="Showroom Image"  class="img-fluid minwidth"></div>
             </div>
             <p class="local"> <img src="public/local-icon.svg" alt="local Map Icon"> Paulo Afonso: Entrega: <span class="time">1 a 5 dias Úteis</span></p>
             <p class="category">Sedan</p>
@@ -95,12 +96,13 @@
                 R$ 250,00/<span class="priceWeek">semana</span>
               </p>
             </div>
-            <button type="button" class="btn bg-red btn-lg seeMoreBtn" id="sedanBtn"><a href="">Ver mais</a></button>
+            <button type="submit" class="btn bg-red btn-lg seeMoreBtn" id="sedanBtn"><a href="">Ver mais</a></button>
           </div>
           <div class="col cardSpace" id="mediumSedans">
             <div class="showroom">
-              <div><img src="img/2.png" alt="Showroom Image"  class="img-fluid minwidth showroomImg"></div>
-              <div>I am another slide.</div>
+              <div><img src="img/sedan medio/1.png" alt="Showroom Image"  class="img-fluid minwidth showroomImg"></div>
+              <div><img src="img/sedan medio/2.png" alt="Showroom Image"  class="img-fluid minwidth showroomImg"></div>
+              <div><img src="img/sedan medio/3.png" alt="Showroom Image"  class="img-fluid minwidth showroomImg"></div>
             </div>
             <p class="local"> <img src="public/local-icon.svg" alt="local Map Icon"> Paulo Afonso: Entrega: <span class="time">1 a 5 dias Úteis</span></p>
             <p class="category">Sedan Médio</p>
@@ -110,12 +112,13 @@
                 R$ 300,00/<span class="priceWeek">semana</span>
               </p>
             </div>
-            <button type="button" class="btn bg-red btn-lg seeMoreBtn" id="mediumSedanBtn"><a href="">Ver mais</a></button>
+            <button type="submit" class="btn bg-red btn-lg seeMoreBtn" id="mediumSedanBtn"><a href="">Ver mais</a></button>
           </div>
           <div class="col cardSpace" id="hatchs">
             <div class="showroom">
-              <div><img src="img/3.png" alt="Showroom Image"  class="img-fluid minwidth"></div>
-              <div>I am another slide.</div>
+              <div><img src="img/compacto/1.png" alt="Showroom Image"  class="img-fluid minwidth"></div>
+              <div><img src="img/compacto/2.png" alt="Showroom Image"  class="img-fluid minwidth"></div>
+              <div><img src="img/compacto/3.png" alt="Showroom Image"  class="img-fluid minwidth"></div>
             </div>
             <p class="local"> <img src="public/local-icon.svg" alt="local Map Icon"> Paulo Afonso: Entrega: <span class="time">1 a 5 dias Úteis</span></p>
             <p class="category">Compacto</p>
@@ -125,14 +128,15 @@
                 R$ 200,00/<span class="priceWeek">semana</span>
               </p>
             </div>
-            <button type="button" class="btn bg-red btn-lg seeMoreBtn" id="compactBtn"><a href="">Ver mais</a></button>
+            <button type="submit" class="btn bg-red btn-lg seeMoreBtn" id="compactBtn"><a href="">Ver mais</a></button>
           </div>
         </div>
         <div class="row">
           <div class="col cardSpace" id="mediumHatchs">
             <div class="showroom">
-              <div><img src="img/1.png" alt="Showroom Image"  class="img-fluid minwidth"></div>
-              <div>Outra imagem</div>
+              <div><img src="img/hatch/1.png" alt="Showroom Image"  class="img-fluid minwidth"></div>
+              <div><img src="img/hatch/2.png" alt="Showroom Image"  class="img-fluid minwidth"></div>
+              <div><img src="img/hatch/3.png" alt="Showroom Image"  class="img-fluid minwidth"></div>
             </div>
             <p class="local"> <img src="public/local-icon.svg" alt="local Map Icon"> Paulo Afonso: Entrega: <span class="time">1 a 5 dias Úteis</span></p>
             <p class="category">Hacth</p>
@@ -142,12 +146,13 @@
                 R$ 300,00/<span class="priceWeek">semana</span>
               </p>
             </div>
-            <button type="button" class="btn bg-red btn-lg seeMoreBtn" id="hatchBtn"><a href="">Ver mais</a></button>
+            <button type="submit" class="btn bg-red btn-lg seeMoreBtn" id="hatchBtn"><a href="">Ver mais</a></button>
           </div>
           <div class="col cardSpace" id="pickUps">
             <div class="showroom">
-              <div><img src="img/2.png" alt="Showroom Image"  class="img-fluid minwidth showroomImg"></div>
-              <div>I am another slide.</div>
+              <div><img src="img/pickup/1.png" alt="Showroom Image"  class="img-fluid minwidth showroomImg"></div>
+              <div><img src="img/pickup/2.png" alt="Showroom Image"  class="img-fluid minwidth showroomImg"></div>
+              <div><img src="img/pickup/3.png" alt="Showroom Image"  class="img-fluid minwidth showroomImg"></div>
             </div>
             <p class="local"> <img src="public/local-icon.svg" alt="local Map Icon"> Paulo Afonso: Entrega: <span class="time">1 a 5 dias Úteis</span></p>
             <p class="category">Caminhonete</p>
@@ -157,12 +162,13 @@
                 R$ 450,00/<span class="priceWeek">semana</span>
               </p>
             </div>
-            <button type="button" class="btn bg-red btn-lg seeMoreBtn" id="pickUpBtn"><a href="">Ver mais</a></button>
+            <button type="submit" class="btn bg-red btn-lg seeMoreBtn" id="pickUpBtn"><a href="">Ver mais</a></button>
           </div>
           <div class="col cardSpace" id="suvs">
             <div class="showroom">
-              <div><img src="img/3.png" alt="Showroom Image"  class="img-fluid minwidth"></div>
-              <div>I am another slide.</div>
+              <div><img src="img/SUV/1.png" alt="Showroom Image"  class="img-fluid minwidth"></div>
+              <div><img src="img/SUV/2.png" alt="Showroom Image"  class="img-fluid minwidth"></div>
+              <div><img src="img/SUV/3.png" alt="Showroom Image"  class="img-fluid minwidth"></div>
             </div>
             <p class="local"> <img src="public/local-icon.svg" alt="local Map Icon"> Paulo Afonso: Entrega: <span class="time">1 a 5 dias Úteis</span></p>
             <p class="category">SUV</p>
@@ -172,10 +178,26 @@
                 R$ 400,00/<span class="priceWeek">semana</span>
               </p>
             </div>
-            <button type="button" class="btn bg-red btn-lg seeMoreBtn" id="suvbtn"><a href="">Ver mais</a></button>
+            <button type="submit" class="btn bg-red btn-lg seeMoreBtn" id="suvbtn"><a href="">Ver mais</a></button>
           </div>
         </div>
       </div>
+      <div class="container" id="terciaryBanner">
+        <div class="container-fluid">
+         <p class="text-white">
+          Quer seu Veículo mais rápido?
+         </p>
+         <span class="fontSmall text-white">Prefira contratar <span class="text-red">online</span>: em poucos passos, você já pode agendar a retirada</span>
+         <button type="button" class="btn text-white btn-lg" id="contractBtn">Contratar Online</button>
+        </div>
+        <div class="container-fluid">
+          <p>
+            Carros seminovos a partir de:
+          </p>
+          <span id="demonstrationPrice">R$ 200,00/semana</span>
+          <img src="img/banner3.png" alt="" class="img-fluid" >
+          <span id="availabilityWarn">Modelos sujeitos a disponibilidade</span>
+        </div>
     </div>
   </main>
   <div class="container displayNone" id="loginPopup">
@@ -207,6 +229,7 @@
         </div>
     </div>
     </div>
+  </div>
   </div>
 </body>
 </html>

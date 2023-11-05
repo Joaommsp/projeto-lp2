@@ -1,57 +1,3 @@
-let bannerImg = document.getElementById('bannerImg')
-bannerImg.addEventListener('animationend', () => {
-  bannerImg.classList.remove('bannerImgAnimation')
-})
-
-$(document).ready(function(){
-  $(".slider").bxSlider({
-    auto: true,
-    mode: "horizontal",
-    touchEnabled: false,
-    controls: false,
-    speed: 1000,
-    pause: 5000
-  });
-});
-$(document).ready(function(){
-  $(".showroom").bxSlider({
-    auto: true,
-    mode: "horizontal",
-    touchEnabled: false,
-    controls: false,
-    speed: 450
-  });
-});
-
-let banner = document.getElementById('secundaryBanner')
-let sliderToRemove = document.querySelector('.slider')
-let divSilder = document.createElement('div')
-divSilder.classList.add('slider')
-let sliderImages = '<div><img src="img/banner2Mobile2.png" alt="Banner Image"  class="img-fluid"></div>' +
-'<div><img src="img/banner22-mobile.png" alt="Banner Image"  class="img-fluid"></div>'
-divSilder.innerHTML = sliderImages
-
-if (window.innerWidth < 768) {
-  banner.removeChild(sliderToRemove)
-  banner.appendChild(divSilder)
-}
-
-// BOTÕES PARA ABRI A PÁGINA COM OS VEÍCULOS DA CATEGORIA 
-
-let sedanBtn = document.getElementById('sedanBtn')
-let mediumSedanBtn = document.getElementById('mediumSedanBtn')
-let compactBtn = document.getElementById('compactBtn')
-let hatchBtn = document.getElementById('hatchBtn')
-let pickUpBtn = document.getElementById('pickUpBtn')
-let suvBtn = document.getElementById('suvBtn')
-
-// sedanBtn.addEventListener('click', sedanPage)
-// mediumSedanBtn.addEventListener('click', mediumSedanPage)
-// compactBtn.addEventListener('click', compactPage)
-// hatchBtn.addEventListener('click', hatchPage)
-// pickUpBtn.addEventListener('click', pickUpPage)
-// suvBtn.addEventListener('click', suvPage)
-
 //Controle POPUOP de login
 
 let main = document.querySelector('main')
@@ -202,13 +148,13 @@ const responseToken = localStorage.getItem('googleResponseToken');
     iconsDiv.id ='iconsDiv'
 
     let profileIcon = document.createElement('img')
-    profileIcon.src = 'public/profile-icon.svg'
+    profileIcon.src = '../../public/profile-icon.svg'
     let settingsIcon = document.createElement('img')
-    settingsIcon.src = 'public/settings-icon.svg'
+    settingsIcon.src = '../../public/settings-icon.svg'
     let helpIcon = document.createElement('img')
-    helpIcon.src = 'public/help-icon.svg'
+    helpIcon.src = '../../public/help-icon.svg'
     let logoutIcon = document.createElement('img')
-    logoutIcon.src = 'public/logout-icon.svg'
+    logoutIcon.src = '../../public/logout-icon.svg'
 
     iconsDiv.append(profileIcon, settingsIcon, helpIcon, logoutIcon)
 
@@ -228,7 +174,7 @@ const responseToken = localStorage.getItem('googleResponseToken');
     logoutBtn.addEventListener('click', logout)
 
     let closeDDIcon = document.createElement('img')
-    closeDDIcon.src = 'public/close-icon.svg'
+    closeDDIcon.src = '../../public/close-icon.svg'
     closeDDIcon.id = 'closeDropDown'
 
     linksDiv.append(myProfile, settings, help, logoutBtn, closeDDIcon)
@@ -251,11 +197,5 @@ const responseToken = localStorage.getItem('googleResponseToken');
     
    }
 
-   /* =========== indo para a página com os veículos usando o botão ver mais ===== */
-
-   let seeMoreBtn = document.querySelectorAll('.seeMoreBtn a')
-
-   seeMoreBtn.forEach((e) => {
-    e.href = 'pages/cars/cars.html'
-   })
+   
  
