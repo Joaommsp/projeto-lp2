@@ -98,66 +98,6 @@ main {
   color: var(--ultra-white);
   border: 2px solid var(--ultra-white);
 }
-/*===================BANNER================*/
-#banner {
-  display: flex;
-  margin-top: 46px;
-  margin-bottom: 56px;
-  padding-bottom: 56px;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  border-bottom: 5px solid var(--cor-primaria);
-}
-#bannerPrimary {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 40%;
-}
-#bannerPrimaryImages div {
-  display: flex;
-  flex-direction: row;
-  justify-content: end;
-  height: 100px;
-}
-#bannerImg2 {
-  max-width: 200px;
-}
-.text-red {
-  color: var(--cor-primaria);
-}
-#bannerList {
-  list-style: none;
-}
-h1 {
-  font-size: 3.5em;
-  font-weight: bold;
-}
-#bannerImg {
-  transform: scale(1); 
-  transition: transform 0.3s; 
-}
-.bannerImgAnimation {
-  animation: upperScale 2s ease 0s 1 normal forwards;
-  pointer-events: none;
-}
-#bannerImg:hover {
-  transform: scale(1.1);
-  transition: 1s linear all;
-}
-#secundaryBanner {
-  display: flex;
-  width: 100%;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-top: 16px;
-  margin-bottom: 16px;
-  width: 100%;
-}
-
 /*=================LOGIN POPUP ================*/
 
 #loginBntContainer {
@@ -234,6 +174,23 @@ h1 {
   font-weight: bold;
 }
 
+/* Conetúdo principal do profile do usuário */
+
+
+#userContainer {
+  width: 100%;
+  height: 500px;
+  margin-top: 6rem;
+  background-color: var(--cor--white);
+}
+#userMainImg {
+  margin-top: 1rem;
+  margin-left: 1rem;
+    width: 78px;
+    border-radius: 100%;
+}
+
+
 /*========= MANIPULAÇÃO DO URUÁRIOS LOGADO: SUMIÇO DO BOTÃO DE LOGIN E APARECIMENTO DAS INFORMAÇÕES ====== */ 
 .loginNone {
   display: none;
@@ -271,12 +228,6 @@ h1 {
   0px 7px 11px rgba(0, 0, 0, 0.37)
 ;
 }
-
-#myProfile {
-  text-decoration: none;
-  color: var(--cor-secundaria);
-}
-
 #iconsDiv {
   display: flex;
   flex-direction: column;
@@ -317,6 +268,10 @@ h1 {
 }
 #closeDropDown:hover {
   cursor: pointer;
+}
+#myProfile {
+  text-decoration: none;
+  color: var(--cor-secundaria);
 }
 
 /*========= MOBILE ============*/

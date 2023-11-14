@@ -18,7 +18,6 @@
   --ultra-white: #ffff;
 }
 
-
 body {
   font-family: 'Poppins', sans-serif;
   background-color: var(--cor-secundaria);
@@ -382,6 +381,10 @@ h1 {
 #closeDropDown:hover {
   cursor: pointer;
 }
+#myProfile {
+  text-decoration: none;
+  color: var(--cor-secundaria);
+}
 
 /* ============ terceiro Banner ========= */
 #terciaryBanner {
@@ -437,6 +440,10 @@ h1 {
 #contractBtn {
   background-color: var(--cor-primaria);
   margin-top: 2.5rem;
+}
+#contractBtn a {
+  text-decoration: none;
+  color: var(--cor-texto-white);
 }
 
 /*========= MOBILE ============*/

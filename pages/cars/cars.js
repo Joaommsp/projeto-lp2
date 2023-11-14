@@ -163,6 +163,8 @@ const responseToken = localStorage.getItem('googleResponseToken');
 
     let myProfile = document.createElement('a')
     myProfile.textContent = 'Meu Perfil'
+    myProfile.href = "/turbo_motors/pages/user/user.html"
+    myProfile.id = "myProfile"
     let settings = document.createElement('a')
     settings.textContent = 'Configurações'
     let help = document.createElement('a')
