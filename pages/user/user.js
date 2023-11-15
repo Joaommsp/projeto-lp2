@@ -281,6 +281,11 @@ const responseToken = localStorage.getItem('googleResponseToken');
   let adressForm = document.getElementById('adressForm')
   // let kartForm = document.getElementById('kartForm')
 
+  window.onload = function() {
+    adressForm.classList.add('displayNone')
+   };
+
+
   myinfos.addEventListener('click', () => {
     if(userForm.classList.contains('displayNone') || !userForm.classList.contains('displayNone')) {
       userForm.classList.remove('displayNone')
