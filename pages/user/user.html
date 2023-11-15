@@ -54,15 +54,107 @@
     </div>
   </nav>
   <main class="transitios1s">
-
-    <div class="container" id="userContainer">
-      <img src="" alt="">
+    <div class="container shadow p-3 mb-5 bg-white rounded" id="userContainer">
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#userInformations" id="navPessoalInfos">Informações Pessoais</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#userInformations" id="navAdress">Endereço</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#userInformations" id="navkart">Minhas Compras</a>
+        </li>
+      </ul>
       <div class="container" id="userInformations">
-        <p id="usarName"></p>
-        <p id="userEmail"></p>
-
+        <img src="" alt="" id="userMainImg">
+        <div class="container">
+          <p id="usarName"></p>
+          <p id="userEmail"></p>
+        </div>
       </div>
-    </div>
+         <!-- id_cliente int AI PK 
+          pes_nome varchar(200) 
+          sexo enum('F','M') 
+          cpf_cnpj varchar(20) 
+          telefone varchar(20) 
+          email varchar(200) 
+          nome_usuario varchar(45) 
+          senha varchar(100) 
+          Fisica varchar(1) 
+          foto_cliente blob
+          FOTO_cliente > img src =
+          id_clinte input e deixa com displayh none invisivel -->
+
+          <form action="submit" id="userForm">
+            <div class="container" id="userCoreInfos">
+              <div>
+                <label for="id_cliente">Id Cliente</label>
+                <input type="number" id="id_cliente" name="id_cliente" class="form-control" >
+              </div>
+              <div>
+                <label for="pes_nome">Nome</label>
+                <input type="text" id="pes_nome" name="pes_nome" class="form-control" >
+              </div>
+              <div>
+                <label for="cpf_cnpj">cpf/cnpj</label>
+                <input type="number" id="cpf_cnpj" name="cpf_cnpj" class="form-control" >
+              </div>
+              <div>
+                <label for="telefone">Tel</label>
+                <input type="number" id="telefone" name="telefone" class="form-control" >
+              </div>
+            </div>
+            <div class="container grid-container" id="userSecundaryInfos">
+              <div>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" class="form-control" >
+              </div>
+              <div>
+                <label for="nome_usuario">Nome de Usuário</label>
+                <input type="text" id="nome_usuario" name="nome_usuario" class="form-control" >
+              </div>
+              <div>
+                <label for="senha">Senha</label>
+                <input type="text" id="senha" name="senha" class="form-control" >
+              </div>
+              <div>
+                <label for="Fisica">Fisica</label>
+                <input type="number" id="Fisica" name="Fisica" class="form-control" >
+              </div>
+            </div>
+            <div class="container" id="userImgData">
+              <input type="file" name="foto_cliente" accept="image/*" id="userImgUpload" onchange="checkFileType(this)"">
+              <input type="submit" value="Upload">
+            </div>
+          </form>
+          <form action="submit" id="adressForm">
+            <div class="container" id="userAdressInfos">
+              <div>
+                <label for="numero">Número</label>
+                <input type="number" id="numero" name="numero" class="form-control" >
+              </div>
+              <div>
+                <label for="logradourp">Logradouro</label>
+                <input type="text" id="logradourp" name="logradourp" class="form-control" >
+              </div>
+              <div>
+                <label for="complemento">Complemento</label>
+                <input type="number" id="complemento" name="complemento" class="form-control" >
+              </div>
+              <div>
+                <label for="bairro">Bairro</label>
+                <input type="number" id="bairro" name="bairro" class="form-control" >
+              </div>
+             </div>
+             <div class="container" id="userCepData">
+              <label for="cep">CEP</label>
+              <input type="number" id="cep" name="cep" class="form-control" >
+             </div>
+          </form>
+      </div>
+
+      
 
   </main>
   <div class="container displayNone" id="loginPopup">

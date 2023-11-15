@@ -21,7 +21,7 @@
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: var(--cor-secundaria);
+  background-color: var(--cor--white);
 }
 main {
   position: relative;
@@ -179,9 +179,11 @@ main {
 
 #userContainer {
   width: 100%;
-  height: 500px;
+  height: fit-content;
+  padding-bottom: 2.5rem;
   margin-top: 6rem;
   background-color: var(--cor--white);
+  border-radius: 10px;
 }
 #userMainImg {
   margin-top: 1rem;
@@ -189,6 +191,67 @@ main {
     width: 78px;
     border-radius: 100%;
 }
+#userInformations {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px 0;
+  margin-bottom: 1.5rem;
+}
+#userInformations p:first-child {
+  font-size: 1.8em;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+#userInformations p {
+  margin-left: 1rem;
+  font-size: .8em;
+}
+#userCoreInfos {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+#userCoreInfos div {
+  width: 100%;
+}
+.grid-container {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Cria duas colunas de largura igual */
+  grid-template-rows: 1fr 1fr; /* Cria duas linhas de altura igual */
+  gap: 10px; /* Adiciona um espaço de 10px entre as células da grid */
+}
+#userImgData {
+  margin-top: 2.5rem;
+}
+#userImgData input{
+  margin-right: 2rem;
+}
+#userAdressInfos{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 10px 0;
+  margin-bottom: 1.5rem;
+  gap: 10px;
+}
+#userAdressInfos div {
+  width: 100%;
+}
+#userCepData {
+  width: 100%;
+}
+
+/* Manipulando as abas do formulário */
+
+.displayNone 
+
 
 
 /*========= MANIPULAÇÃO DO URUÁRIOS LOGADO: SUMIÇO DO BOTÃO DE LOGIN E APARECIMENTO DAS INFORMAÇÕES ====== */ 
@@ -426,6 +489,19 @@ main {
   transition: .5s;
   z-index: 10;
 }
+#userCoreInfos {
+  flex-direction: column;
+}
+#userImgData input{
+  margin-bottom: 2rem;
+  font-size: .8em;
+}
+#userAdressInfos {
+  flex-direction: column;
+}
+#userContainer a {
+ font-size: .8em; 
+}
 
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -512,6 +588,7 @@ main {
     transition: .5s;
     z-index: 10;
   }
+
 }
 
 @media screen and (max-width: 990px) {

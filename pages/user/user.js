@@ -1,3 +1,4 @@
+
 //Controle POPUOP de login
 
 let main = document.querySelector('main')
@@ -207,12 +208,9 @@ const responseToken = localStorage.getItem('googleResponseToken');
     let userContainer = document.getElementById('userContainer')
     let userImgData = data.picture
 
-    let userImg = document.createElement('img')
+    let userImg = document.getElementById('userMainImg')
+    userImg.classList.add('img-fluid') 
     userImg.src = userImgData
-    userImg.id = 'userMainImg'
-    userImg.classList.add('img-fluid')
-
-    userContainer.appendChild(userImg)
 
     let userNameContent = document.getElementById('usarName')
     let usarNameData = data.name
@@ -254,4 +252,45 @@ const responseToken = localStorage.getItem('googleResponseToken');
   }
 
   }
- 
+
+  let inputUserImage = document.getElementById('userImgUpload')
+
+  function checkFileType(input) {
+    var fileName = input.value;
+    var idxDot = fileName.lastIndexOf(".") + 1;
+    var extFile = fileName.substr(idxDot, fileName.length).toLowerCase();
+    if (extFile=="jpg" || extFile=="jpeg" || extFile=="png"){
+       // arquivo aceito
+       return true;
+    } else {
+       alert("Apenas imagens no formato jpeg/png!");
+       input.value='';
+       return false;
+    }
+  }
+  
+  console.log(inputUserImage)
+  
+ /* BARRA DE NAVEGAÇÃO DO "MEU PERFIL" */
+
+  let myinfos = document.getElementById("navPessoalInfos")
+  let myadress = document.getElementById("navAdress")
+  // let kart = document.getElementById('navkart')
+
+  let userForm = document.getElementById('userForm')
+  let adressForm = document.getElementById('adressForm')
+  // let kartForm = document.getElementById('kartForm')
+
+  myinfos.addEventListener('click', () => {
+    if(userForm.classList.contains('displayNone') || !userForm.classList.contains('displayNone')) {
+      userForm.classList.remove('displayNone')
+      adressForm.classList.add('displayNone')
+    }
+  })
+
+  myadress.addEventListener('click', () => {
+    if(adressForm.classList.contains('displayNone') || !adressForm.classList.contains('displayNone')) {
+      adressForm.classList.remove('displayNone')
+      userForm.classList.add('displayNone')
+    }
+  })
